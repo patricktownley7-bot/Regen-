@@ -1,38 +1,27 @@
 # Regen-
 
-Regeneration coin project with a Termux-ready SPY paper-trading demonstration app.
+Regeneration coin project with a Termux-ready **paper-trading** demonstration app for both an S&P 500 ETF and crypto.
 
 ## Install on Termux
 
-From the cloned repository, run:
-
 ```bash
 bash install-termux.sh
-```
-
-The installer updates Termux, installs Python, creates `.venv`, installs dependencies, and creates `.env` without overwriting an existing configuration.
-
-Configure your **Alpaca paper account**:
-
-```bash
 nano .env
+./start-termux.sh
 ```
 
-Set:
+Configure an Alpaca **paper** account in `.env`:
 
 ```env
 APCA_API_KEY_ID=your_paper_key
 APCA_API_SECRET_KEY=your_paper_secret
 PAPER_TRADING=true
+SYMBOLS=SPY,BTC/USD
 ```
 
-Start the app:
+`SPY` is the S&P 500 ETF example and `BTC/USD` is the crypto example. You can change `SYMBOLS` to other symbols supported by your paper account. `QTY` controls stock quantity and `CRYPTO_QTY` controls crypto quantity.
 
-```bash
-./start-termux.sh
-```
-
-The app polls SPY quotes and displays paper-trading signals/orders in the terminal. It uses a simple moving-average demonstration strategy and is not financial advice.
+The app polls quotes and uses a simple moving-average demonstration strategy. It prints paper signals and orders for every configured symbol. This is not financial advice and does not guarantee returns.
 
 ## Safety
 
