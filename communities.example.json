@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Example authorized Telegram channel",
+    "telegram": "@replace_with_authorized_channel",
+    "keywords": ["btc", "eth", "yield", "farm", "risk"]
+  }
+]
